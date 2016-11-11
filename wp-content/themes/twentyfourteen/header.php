@@ -31,6 +31,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+	<img src='/wp-images/pic.png' />
+</div>
 <div id="page" class="hfeed site">
 	<?php if ( get_header_image() ) : ?>
 	<div id="site-header">
