@@ -29,7 +29,7 @@
 	</div>
 	<div class="form-group">
 		<label class="text-success">32位MD5加密大写</label>
-		<input type="text" id="uppmd5" class="form-control" disabled placeholder="32位MD5加密大写" />
+		<input type="text" id="uppmd5" class="form-control text-uppercase" disabled placeholder="32位MD5加密大写" />
 	</div>
 	<p class="text-center"><strong>程序员，科学家团队博客</strong></p>
 </div>
@@ -40,6 +40,9 @@
 			if ($(this).val() != "") {
 				$("#lowmd5").val(md5($(this).val()));
 				$("#uppmd5").val(md5($(this).val()));
+			} else {
+				$("#lowmd5").val("");
+				$("#uppmd5").val("");
 			}
 		})
 	})
