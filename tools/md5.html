@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>在线MD5加密|MD5在线加密|在线加密MD5_程序员，科学家团队博客</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="applicable-device" content="pc,mobile">
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+	<meta name="author" content="科学家团队">
+	<meta name="keywords" content="在线MD5加密,MD5在线加密,在线加密MD5">
+	<meta name="description" content="MD5是Message Digest Algorithm的缩写，MD5用于确保信息传输完整一致。目前主流编程语言普遍实现MD5算法，MD5是常用的加密方式之一。Md5有定长、不可逆解密等特点。本页面提供在线对字符串进行MD5加密，支持生成32位定长大写字符串和32位定长小写字符串。">
+	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all">
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1 class="text-center">在线MD5加密</h1>
+	<p class="lead">MD5是Message Digest Algorithm的缩写，MD5用于确保信息传输完整一致。目前主流编程语言普遍实现MD5算法，MD5是常用的加密方式之一。Md5有定长、不可逆解密等特点。本页面提供在线对字符串进行MD5加密，支持生成32位定长大写字符串和32位定长小写字符串。</p>
+	<div class="form-group">
+		<label>MD5加密前字符串</label>
+		<input type="text" id="inputmd5" class="form-control" placeholder="MD5加密前字符串" />
+	</div>
+	<div class="form-group">
+		<label class="text-success">32位MD5加密小写</label>
+		<input type="text" id="lowmd5" class="form-control" disabled placeholder="32位MD5加密小写" />
+	</div>
+	<div class="form-group">
+		<label class="text-success">32位MD5加密大写</label>
+		<input type="text" id="uppmd5" class="form-control" disabled placeholder="32位MD5加密大写" />
+	</div>
+	<p class="text-center"><strong>程序员，科学家团队博客</strong></p>
+</div>
+<script type="text/javascript" src="./js/md5.js"></script>
+<script>
+	$(document).ready(function () {
+		$("#inputmd5").bind('input propertychange', function() {
+			if ($(this).val() != "") {
+				$("#lowmd5").val(md5($(this).val()));
+				$("#uppmd5").val(md5($(this).val()));
+			}
+		})
+	})
+</script>
+</body>
+</html>
