@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>在线二维码生成器|在线二维码生成|在线生成二维码_程序员，科学家团队博客</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta http-equiv="Cache-Control" content="no-transform">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="applicable-device" content="pc,mobile">
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+	<meta name="author" content="科学家团队">
+	<meta name="keywords" content="在线二维码生成器,在线二维码生成,在线生成二维码">
+	<meta name="description" content="二维码是现在营销最常用的宣传载体，二维码对不同行的信息自动识别功能、及处理图形旋转变化点。二维码具有信息量大、易识别、成本低等优点。本页面提供在线对字符串生成二维码图片。">
+	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all">
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1 class="text-center">在线生成二维码</h1>
+	<p class="lead">二维码是现在营销最常用的宣传载体，二维码具有信息量大、易识别、成本低等优点。本页面免费提供在线对字符串生成二维码图片，支持普通字符串，URL链接。</p>
+	<div class="form-group" title="http://blog.kxjteam.com" style="margin-bottom: 10px;">
+		<label class="text-success">输入要生成二维码的字符串</label>
+		<input type="text" id="string" class="form-control" value="http://blog.kxjteam.com" oninput="makeQrcode(this)" />
+	</div>
+	<div id="qrcode" class="form-group">
+	</div>
+	<p class="text-center"><strong>程序员，科学家团队博客</strong></p>
+</div>
+<script type="text/javascript" src="./js/qrcode.min.js"></script>
+<script>
+	// 生成二维码函数
+	function makeQrcode(ele){
+		$('#qrcode').html('');
+		var qrcode = new QRCode(document.getElementById("qrcode"),{
+			width: 128,
+			height: 128,
+			colorDark : "#000000",
+			colorLight : "#ffffff",
+			correctLevel : QRCode.CorrectLevel.H
+		});
+		qrcode.makeCode($(ele).val());
+	}
+	makeQrcode('#string');
+</script>
+</body>
+</html>
